@@ -1,14 +1,14 @@
-# TaskPilot: an AI agent that manages your tasks
+﻿# TaskPilot: an AI agent that manages your tasks
 
 **Project chosen: B (TaskPilot).** Users manage a to-do list by chatting with an LLM agent. The agent decides which tool to call (add, list, update, delete, assign), changes the data in Postgres, and shows exactly which tools it used. Roles are enforced on the backend.
 
 ## Live app
 | | |
 |---|---|
-| Frontend | `<PASTE VERCEL URL>` |
-| Backend | `<PASTE RENDER URL>` (API docs at `/docs`) |
-| Admin login | `<email>` / `<password>` |
-| User login | `<email>` / `<password>` |
+| Frontend | `https://taskpilot-taskpilot2.vercel.app` |
+| Backend | `https://taskpilot-g5l3.onrender.com` (API docs at `/docs`) |
+| Admin login | `admin@taskpilot.dev` / `AdminPass123!` |
+| User login | `user@taskpilot.dev` / `DemoPass123!` |
 
 > The backend runs on Render's free plan: it sleeps after 15 minutes idle and the first request can take about a minute. If login seems stuck, wait and retry.
 
@@ -68,3 +68,4 @@ If `DATABASE_URL` is not set, the app falls back to a local SQLite file for deve
 - Admin page is read-only (no user management UI).
 - Agent quality depends on the free model; very ambiguous requests may need a follow-up.
 - Reminders and notifications are not implemented.
+
