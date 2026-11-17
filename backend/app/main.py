@@ -6,13 +6,7 @@ from .database import Base, engine
 from .routers import admin, auth, chat, tasks
 
 app = FastAPI(title="TaskPilot API", version="1.0.0")
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[o.strip() for o in settings.frontend_origins.split(",") if o.strip()],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+app.add_middleware(CORSMiddleware, allow_origins=settings.origins, allow_methods=["*"], allow_headers=["*"])
 
 Base.metadata.create_all(engine)
 
